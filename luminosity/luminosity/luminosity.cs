@@ -12,9 +12,34 @@ namespace luminosity
 {
     public partial class luminosity : Form
     {
-        public luminosity()
+        private void initilize()
         {
             InitializeComponent();
+        }
+
+        public luminosity()
+        {
+            initilize();
+
+            Color background = Color.FromArgb(32, 31, 36);
+
+            Color foreground = Color.FromArgb(52, 51, 56);
+
+            this.BackColor = foreground;
+
+            this.Text = "Luminosity";
+
+            this.Icon = Properties.Resources.lumo;
+
+            Panel toolBar = new Panel();
+
+            toolBar.Height = 25;
+
+            toolBar.Width = this.Width;
+
+            toolBar.BackColor = background;
+
+            this.Controls.Add(toolBar);
         }
     }
 }
