@@ -25,7 +25,7 @@ namespace luminosity
 
             Color foreground = Color.FromArgb(52, 51, 56);
 
-            this.BackColor = foreground;
+            //this.BackColor = foreground;
 
             this.Text = "Luminosity";
 
@@ -33,13 +33,23 @@ namespace luminosity
 
             Panel toolBar = new Panel();
 
-            toolBar.Height = 25;
+            toolBar.Height = 60;
 
             toolBar.Width = this.Width;
 
             toolBar.BackColor = background;
 
             this.Controls.Add(toolBar);
+
+            Label title = new Label();
+
+            title.Text = this.Text;
+
+            title.ForeColor = Color.White;
+
+            title.Location = new Point(15, 5);
+
+            toolBar.Controls.Add(title);
         }
     }
 }
